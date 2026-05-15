@@ -1,1 +1,1 @@
-bir hesaplaşma, 
+.
