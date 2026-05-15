@@ -1,2 +1,1 @@
-tecavüz
-/intikam
+.
