@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>cin düğünü</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: monospace; background: #fff; color: #000; padding: 40px; line-height: 1.6; }
+        #icerik { max-width: 700px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <div id="icerik">Yazı yükleniyor ulan...</div>
+
+    <script>
+        // Repondaki .md dosyasının adını buraya yazıyorsun ulan!
+        const mdDosyasi = 'deli-doktoru.md'; 
+
+        fetch(mdDosyasi)
+            .then(response => response.text())
+            .then(markdownMetni => {
+                // Markdown'ı saniyeler içinde temiz HTML'e çevirip div'e çakıyor!
+                document.getElementById('icerik').innerHTML = marked.parse(markdownMetni);
+            })
+            .catch(err => {
+                document.getElementById('icerik').innerHTML = 'hata, yazı yüklenmedi';
+                console.error(err);
+            });
+    </script>
+
+</body>
+</html>
