@@ -22,38 +22,48 @@
     </script>
 
     <style>
-        /* Senin o tavizsiz, kaskatı monastic tasarım kuralların */
+        /* İkinci fotoğraftaki o kaskatı, simsiyah nizamın birebir CSS kodları ulan! */
         body { 
-            font-family: monospace; 
-            font-size: 16px; /* İhtiyacına göre var(--font-scale) de yapabilirsin usta */
-            font-weight: 900; 
+            font-family: monospace !important; 
+            font-size: 16px; 
+            font-weight: 900 !important; /* Her harfi birer dökme demir gibi kalın yapar! */
             background: #fff; 
-            color: #000; 
+            color: #000 !important; 
             padding: 40px; 
             line-height: 1.6; 
             text-transform: lowercase !important; /* Büyük harflere ebediyen ölüm! */
         }
         
+        /* Paragrafların o gereksiz sağa kaymasını felç eden, sola yaslayan net blok */
         #icerik { 
-            max-width: 700px; 
-            margin: 0 auto; 
+            max-width: 100%; /* Sola tam yaslansın, genişlesin ulan! */
+            margin: 0; 
+            text-align: left;
         }
 
-        /* Markdown içinden çıkacak h1 başlıkları için o şanlı kalın alt çizgi nizamı */
+        /* .md içinden çıkan tüm etiketleri (p, li vb.) kaskatı kalın yapmak için mühür */
+        #icerik p, #icerik {
+            font-weight: 900 !important;
+            color: #000 !important;
+        }
+
+        /* İkinci fotoğraftaki o şanlı, kalın alt çizgili başlığın milimetrik ikizi */
         #icerik h1 {
+            font-family: monospace !important;
+            font-weight: 900 !important;
             display: inline-block;
             text-decoration: underline !important;
-            text-decoration-thickness: 5px !important;
+            text-decoration-thickness: 5px !important; /* O şanlı 5 piksellik çelik çizgi! */
             text-underline-offset: 10px !important;
-            color: black;
-            margin-bottom: 20px;
+            color: #000 !important;
+            margin-top: 0;
+            margin-bottom: 30px;
             padding-bottom: 2px;
+            font-size: 2em;
         }
     </style>
 </head>
 <body>
-
-<h1>bir hesaplaşma</h1>
 
     <div id="icerik">yazı yükleniyor ulan...</div>
 
@@ -64,7 +74,7 @@
         fetch(mdDosyasi)
             .then(response => response.text())
             .then(markdownMetni => {
-                // Markdown'ı saniyeler içinde temiz ve lowercase uyumlu HTML'e çevirip div'e çakıyor!
+                // Markdown'ı saniyeler içinde temiz HTML'e çevirip div'e çakıyor!
                 document.getElementById('icerik').innerHTML = marked.parse(markdownMetni);
             })
             .catch(err => {
