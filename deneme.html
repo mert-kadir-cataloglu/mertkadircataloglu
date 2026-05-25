@@ -2,25 +2,67 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cin düğünü</title>
+    <link rel="icon" href="./favicon.png" type="image/png">
+    
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "mert kadir çataloğlu",
+      "jobTitle": "yazar",
+      "description": "fragmanlar ve monologlar üzerine odaklanan yazar",
+      "url": "http://www.mertkadircatalogu.org",
+      "mainEntityOfPage": "http://www.mertkadircatalogu.org",
+      "knowsAbout": ["edebiyat", "monologlar", "fragmanlar", "felsefe"]
+    }
+    </script>
+
     <style>
-        body { font-family: monospace; background: #fff; color: #000; padding: 40px; line-height: 1.6; }
-        #icerik { max-width: 700px; margin: 0 auto; }
+        /* Senin o tavizsiz, kaskatı monastic tasarım kuralların */
+        body { 
+            font-family: monospace; 
+            font-size: 16px; /* İhtiyacına göre var(--font-scale) de yapabilirsin usta */
+            font-weight: 900; 
+            background: #fff; 
+            color: #000; 
+            padding: 40px; 
+            line-height: 1.6; 
+            text-transform: lowercase !important; /* Büyük harflere ebediyen ölüm! */
+        }
+        
+        #icerik { 
+            max-width: 700px; 
+            margin: 0 auto; 
+        }
+
+        /* Markdown içinden çıkacak h1 başlıkları için o şanlı kalın alt çizgi nizamı */
+        #icerik h1 {
+            display: inline-block;
+            text-decoration: underline !important;
+            text-decoration-thickness: 5px !important;
+            text-underline-offset: 10px !important;
+            color: black;
+            margin-bottom: 20px;
+            padding-bottom: 2px;
+        }
     </style>
 </head>
 <body>
 
-    <div id="icerik">Yazı yükleniyor ulan...</div>
+    <div id="icerik">yazı yükleniyor ulan...</div>
 
     <script>
-        // Repondaki .md dosyasının adını buraya yazıyorsun ulan!
+        // Repondaki o şanlı .md dosyasının adı
         const mdDosyasi = 'deli-doktoru.md'; 
 
         fetch(mdDosyasi)
             .then(response => response.text())
             .then(markdownMetni => {
-                // Markdown'ı saniyeler içinde temiz HTML'e çevirip div'e çakıyor!
+                // Markdown'ı saniyeler içinde temiz ve lowercase uyumlu HTML'e çevirip div'e çakıyor!
                 document.getElementById('icerik').innerHTML = marked.parse(markdownMetni);
             })
             .catch(err => {
