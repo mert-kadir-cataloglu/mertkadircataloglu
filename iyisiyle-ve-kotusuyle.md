@@ -1,1 +1,1 @@
-.
+tavuk ve yumurta arasındaki ilişki
