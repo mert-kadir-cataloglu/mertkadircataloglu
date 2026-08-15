@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <title>mert kadir çataloğlu</title>
-  <!-- <meta name="description" content="fragmanlarım ve monologlarımın bulunduğu site"> -->
-  <link rel="icon" href="./favicon.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mert kadir çataloğlu</title> <!-- tarayıcı sekmesinde görünen başlık -->
+  <!-- <meta name="description" content="fragmanlarım ve monologlarımın bulunduğu site"> --> <!-- arama motorları için site açıklaması (pasif durumda) -->
+  <link rel="icon" href="./favicon.png" type="image/png"> <!-- sekme simgesi (favicon) -->
+  <meta charset="UTF-8"> <!-- türkçe karakter desteği için utf-8 kodlaması -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobil cihazlarda doğru ölçekleme ve responsive görünüm ayarı -->
+  
+  <!-- arama motorları ve arama indeksleri için yazar ve içerik kimliği (json-ld) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -21,38 +23,47 @@
   ]
 }
 </script>
+  
 <style>
+/* ana gövde stili: font tipini korur, harfleri en kalın seviyeye getirir ve tümünü küçük harf yapar*/
 body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
     font-weight: 900;
     text-transform: lowercase !important;
 }
+
+  /* ana sitedeki tüm genel bağlantıların (linklerin) stili */
   a {
-    color: black;
-    text-decoration: underline !important;
-    text-decoration-thickness: 5px !important;
-    text-underline-offset: 12px !important;
-  }
-  h1 {
-    font-size: 45px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
+    color: black; /* link rengini siyah yapar */
+    text-decoration: underline !important; /* linklerin altına çizgi ekler */
+    text-decoration-thickness: 5px !important; /* alt çizginin kalınlığını 5 piksel yapar */
+    text-underline-offset: 12px !important; /* alt çizgiyi metinden 12 piksel aşağıya iter */
   }
 
+  /* liste içindeki büyük ana başlıkların stili */
+  h1 {
+    font-size: 45px; /* başlık yazı boyutunu 45 piksel yapar */
+    font-weight: bold; /* başlığı kalın harfli yapar */
+    margin: 0; /* başlığın dışındaki varsayılan boşlukları sıfırlar */
+    padding: 0; /* başlığın içindeki varsayılan dolgu boşluklarını sıfırlar */
+  }
+
+  /* sayfa altı (footer) için özel alan tanımlamaları */
 footer {
-    line-height: 1.8; /* Satırların mobilde üst üste binmesini engeller */
+    line-height: 1.8; /* satırların mobilde üst üste binmesini engeller */
   }
   footer a {
-    display: inline-block; /* Çizginin yanındaki/altındaki metne taşmasını keser */
-    text-underline-offset: 4px !important; /* Çizgiyi e-postanın üstüne binmeyecek mesafeye çeker */
-    text-decoration-thickness: 2px !important; /* İnce, kibar bir alt çizgi yapar */
+    display: inline-block; /* çizginin yanındaki/altındaki metne taşmasını keser */
+    text-underline-offset: 4px !important; /* çizgiyi e-postanın üstüne binmeyecek mesafeye çeker */
+    text-decoration-thickness: 2px !important; /* ince, kibar bir alt çizgi yapar */
   }
   
 </style>
 </head>
 <body>
+
+  <!-- ana yazı listesi -->
 <ul>
   <li><h1><a href="cin-dugunu.html">cin düğünü</a></h1></li>
   <!-- <li><h1><a href="kisa-devre.html">kısa devre</a></h1></li> -->
@@ -63,8 +74,10 @@ footer {
   <li><h1><a href="iyisiyle-ve-kotusuyle.html">iyisiyle ve kötüsüyle</a></h1></li>
   <!-- <li><h1><a href="varyasyonlar.html">varyasyonlar</a></h1></li> -->
 </ul>
+
+  <!-- sayfa altı dipnot ve e-posta temas alanı -->
 <footer style="margin-top: 50px; opacity: 0.5; font-size: 0.9em; font-family: sans-serif;">
-<p>mert kadir çataloğlu, fragmanlar ve monologlar üzerine odaklanan yazar</p>
+<p>mert kadir çataloğlu, fragmanlar ve monologlar üzerine odaklanan yazar.</p>
 <p><a href="https://mertkadircataloglu.org/destek.html" target="_blank" rel="noopener noreferrer">destek ol</a> - eposta: mertkadircataloglu[et]protonmail[nokta]com</p>
 </footer>
 </body>
