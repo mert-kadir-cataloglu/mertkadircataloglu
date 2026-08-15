@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <title>sekme adı</title>
-  <!-- <meta name="description" content="aramalarda görünen açıklama"> -->
-  <link rel="icon" href="./favicon.png" type="image/png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sekme adı</title> <!-- tarayıcı sekmesinde görünen başlık -->
+  <!-- <meta name="description" content="aramalarda görünen açıklama"> --> <!-- arama motorları için site açıklaması (pasif durumda) -->
+  <link rel="icon" href="./favicon.png" type="image/png"> <!-- sekme simgesi (favicon) -->
+  <meta charset="UTF-8"> <!-- türkçe karakter desteği için utf-8 kodlaması -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobil cihazlarda doğru ölçekleme ve responsive görünüm ayarı -->
+  <!-- arama motorları ve arama indeksleri için yazar ve içerik kimliği (json-ld) -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -22,13 +23,15 @@
 }
 </script>
 <style>
+  /* ana gövde stili: font tipini korur, harfleri en kalın seviyeye getirir ve tümünü küçük harf yapar */
 body {
     font-family: var(--font-secondary);
     font-size: var(--font-scale);
     font-weight: 900;
     text-transform: lowercase !important;
 }
-  h1 {
+   /* sayfa içi ana başlıklar: altı kalın çizili, mesafeli ve blok yapıda başlık görünümü */  
+h1 {
     display: inline-block;
     text-decoration: underline !important;
     text-decoration-thickness: 5px !important;
@@ -36,13 +39,13 @@ body {
     color: black;
     margin-bottom: 10px;
     padding-bottom: 2px;
-     }
+}
 </style>
 </head>
 <body>
-   <!-- <h1>başlık</h1> -->
-    <p>
-        yazılar buraya
-    </p>
+  <!-- <h1>başlık</h1> --> <!-- ana başlık eklemek istendiğinde kullanılacak taslak satır -->
+  <p>
+        yazılar buraya <!-- ana metin veya paragraf içeriği -->
+  </p>
 </body>
 </html>
